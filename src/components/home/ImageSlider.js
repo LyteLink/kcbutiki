@@ -16,7 +16,7 @@ import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 const ImageSlider = ({ slides }) => {
   return (
     <Swiper
-      className="swiper-container md:h-[94vh] mt-10"
+      className="swiper-container h-screen md:h-[94vh] mt-10"
       modules={[Navigation, A11y]}
       spaceBetween={0}
       slidesPerView={1}
@@ -49,7 +49,7 @@ const ImageSlider = ({ slides }) => {
 
       <SwiperSlide>
         <div className="relative">
-          <div className="absolute right-0 top-0 h-full w-1/3 bg-black/70 transform -skew-x-12">
+          <div className="absolute right-0 top-0 h-full w-2/3 md:w-1/3 bg-black/70 transform -skew-x-12">
             <div className="h-full flex flex-col justify-center pl-6 pr-4 transform skew-x-12">
               <h2 className="text-white text-3xl mb-4">Slide 1 Title</h2>
               <p className="text-white text-lg">Slide 1 description</p>
