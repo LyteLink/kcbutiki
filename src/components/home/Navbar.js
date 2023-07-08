@@ -213,31 +213,31 @@ const Navbar = () => {
             <div className="w-fit p-3 ml-6 bg-secondary rounded-lg">
               <Link
                 href="/subject"
-                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit tex-slate-200"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
               >
                 Subject Departments
               </Link>
               <Link
                 href="/learning"
-                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit tex-slate-200"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
               >
                 Learning
               </Link>
               <Link
                 href="/a-level"
-                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit tex-slate-200"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
               >
                 A'Level
               </Link>
               <Link
                 href="/o-level"
-                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit tex-slate-200"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
               >
                 O'Level
               </Link>
               <Link
                 href="/uneb"
-                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit tex-slate-200"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
               >
                 UNEB
               </Link>
@@ -256,19 +256,19 @@ const Navbar = () => {
             <div className="w-fit p-3 ml-6 bg-secondary rounded-lg">
               <Link
                 href="/clubs/123"
-                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit tex-slate-200"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
               >
                 Math Club
               </Link>
               <Link
                 href="/clubs/123"
-                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit tex-slate-200"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
               >
                 Science Club
               </Link>
               <Link
                 href="/clubs"
-                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit tex-slate-200"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
               >
                 All clubs
               </Link>
@@ -276,13 +276,13 @@ const Navbar = () => {
           </div>
           <Link
             href="/gallery"
-            className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+            className="text-slate-100 hover:bg-secondary block w-fit my-1 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
           >
             gallery
           </Link>
           <Link
             href="/contact"
-            className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+            className="text-slate-100 hover:bg-secondary block w-fit my-1 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
           >
             contact
           </Link>
