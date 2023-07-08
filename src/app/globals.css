@@ -200,3 +200,17 @@ table th {
 .flex-3 {
   flex: 3;
 }
+
+.gallery {
+  width: calc(400px * 8);
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-400px * 4));
+  }
+}

@@ -92,13 +92,13 @@ const Footer = () => {
         <div className="container">
           <div className="text-center">
             <p className="text-sm text-gray-300">
-              All Rights Reserved. &copy; 2022{" "}
+              All Rights Reserved. &copy; {new Date().getFullYear()}{" "}
               <a href="#">KIIRA COLLEGE BUTIKI</a> Design By :{" "}
               <a
                 href="https://html.design/"
                 className="text-gray-300 hover:text-white"
               >
-                Solve4X
+                LyteLink
               </a>
             </p>
           </div>

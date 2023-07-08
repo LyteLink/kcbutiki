@@ -48,7 +48,7 @@ const About = () => {
 
       <div className="py-10">
         <h1 className="text-center text-4xl md:text-6xl font-bold mb-10 my-4">
-          At the hills
+          A glance At the hills
         </h1>
         <Gallery />
       </div>

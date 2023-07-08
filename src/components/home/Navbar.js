@@ -103,65 +103,37 @@ const Navbar = () => {
                   <div className="py-1">
                     <Link
                       href="/subjects"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
                     >
                       Subject Departments
                     </Link>
                     <Link
-                      href="/learning"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      E-Learning
-                    </Link>
-                    <Link
                       href="/a-level"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
                     >
                       A'Level
                     </Link>
                     <Link
                       href="/o-level"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
                     >
                       O'Level
                     </Link>
                     <Link
                       href="/uneb"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
                     >
                       UNEB
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className="relative inline-block link">
-                <button className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase flex-align-center gap-x-2">
-                  Butiki Family
-                  <FiChevronDown />
-                </button>
-                <div className="dropdown absolute z-10 mt-2 w-48 bg-white shadow-lg rounded-lg">
-                  <div className="py-1">
-                    <Link
-                      href="/staff-members"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Staff Members
-                    </Link>
-                    <Link
-                      href="/student-leaders"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Student Leaders
-                    </Link>
-                    <Link
-                      href="/classes"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Classes
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <Link
+                href="/family"
+                className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+              >
+                Butiki Familiy
+              </Link>
               <div className="relative inline-block link">
                 <button className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase flex-align-center gap-x-2">
                   Clubs & Societies
@@ -170,34 +142,34 @@ const Navbar = () => {
                 <div className="dropdown absolute z-10 mt-2 w-48 bg-white shadow-lg rounded-lg">
                   <div className="py-1">
                     <Link
-                      href="/staff-members"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      href="/clubs/123"
+                      className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
                     >
                       Math Club
                     </Link>
                     <Link
-                      href="/student-leaders"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      href="/clubs/123"
+                      className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
                     >
                       Science Club
                     </Link>
                     <Link
-                      href="/classes"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      href="/clubs/123"
+                      className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
                     >
                       Food & Nutrition Club
                     </Link>
                     <Link
-                      href="/classes"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      href="/clubs/123"
+                      className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
                     >
                       Chemistry Club
                     </Link>
                     <Link
-                      href="/classes"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      href="/clubs"
+                      className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
                     >
-                      More
+                      All clubs
                     </Link>
                   </div>
                 </div>
@@ -221,7 +193,7 @@ const Navbar = () => {
 
       {/* Responsive Hamburger Menu */}
       <div className={`${isMenuOpen ? "block" : "hidden"} lg:hidden`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 overflow-auto hide-scrollbar">
           <Link
             href="/"
             className="text-slate-100 hover:bg-secondary hover:text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -238,92 +210,79 @@ const Navbar = () => {
             <button className="text-slate-100 hover:bg-secondary hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               Academics
             </button>
-            <div className="absolute z-10 hidden mt-2 py-2 w-48 bg-white shadow-lg">
+            <div className="bg-[rgb(34,70,32)] p-3 ml-3">
               <Link
                 href="/subject"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
               >
                 Subject Departments
               </Link>
               <Link
                 href="/learning"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
               >
                 Learning
               </Link>
               <Link
                 href="/a-level"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
               >
                 A'Level
               </Link>
               <Link
                 href="/o-level"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
               >
                 O'Level
               </Link>
               <Link
                 href="/uneb"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
               >
                 UNEB
               </Link>
             </div>
           </div>
-          <div className="relative">
-            <button className="text-slate-100 hover:bg-secondary hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-              Butiki Family
-            </button>
-            <div className="absolute z-10 hidden mt-2 py-2 w-48 bg-white shadow-lg">
-              <Link
-                href="/staff-members"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Staff Members
-              </Link>
-              <Link
-                href="/student-leaders"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Student Leaders
-              </Link>
-              <Link
-                href="/classes"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Classes
-              </Link>
-            </div>
-          </div>
+          <Link
+            href="/family"
+            className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+          >
+            Butiki Familiy
+          </Link>
           <div className="relative">
             <button className="text-slate-100 hover:bg-secondary hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               Clubs & Societies
             </button>
-            <div className="absolute z-10 hidden mt-2 py-2 w-48 bg-white shadow-lg">
+            <div className="bg-[rgb(34,70,32)] p-3 ml-3">
               <Link
-                href="/math-club"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                href="/clubs/123"
+                className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
               >
                 Math Club
               </Link>
               <Link
-                href="/science-club"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                href="/clubs/123"
+                className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
               >
                 Science Club
+              </Link>
+              <Link
+                href="/clubs"
+                className="block px-4 py-2 text-sm text-slate-200 hover:bg-[rgb(47,86,45)] w-fit"
+              >
+                All clubs
               </Link>
             </div>
           </div>
           <Link
             href="/gallery"
-            className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+            className="text-slate-100 block mt-2 hover:bg-secondary w-fit hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
           >
             gallery
           </Link>
           <Link
             href="/contact"
-            className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+            className="text-slate-100 block mt-2 hover:bg-secondary w-fit hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
           >
             contact
           </Link>

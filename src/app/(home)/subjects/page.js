@@ -20,8 +20,19 @@ const Subjects = () => {
         </div>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {Array.apply(null, { length: 15 }).map((_, i) => (
-            <div className="p-4 shadow-lg shadow-slate-200 rounded-lg" key={i}>
-              <h1>Mathematics</h1>
+            <div
+              className="p-4 shadow-lg shadow-slate-200 rounded-lg border"
+              key={i}
+            >
+              <h1 className="text-3xl font-semibold text-center">
+                Mathematics
+              </h1>
+              <p className="text-muted mt-3">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Debitis nemo culpa cumque esse ea reiciendis magnam accusamus
+                sit, placeat quod ratione perferendis ducimus fugit harum ex
+                sunt modi labore amet!
+              </p>
             </div>
           ))}
         </div>
