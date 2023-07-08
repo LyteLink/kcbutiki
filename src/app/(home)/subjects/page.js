@@ -5,7 +5,7 @@ import React from "react";
 const Subjects = () => {
   return (
     <>
-      <div className="pt-36 pb-10 max-w-7xl mx-auto px-4">
+      <div className="pt-36 pb-12 max-w-7xl mx-auto px-4">
         <div className="text-center">
           <h1 className="text-4xl font-bold">Subjects</h1>
           <p className="text-muted mt-3">
