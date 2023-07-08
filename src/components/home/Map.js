@@ -11,6 +11,25 @@ const Map = () => {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
+      <div className="text-center mt-4">
+        <a
+          id="largeMapLink"
+          target="_blank"
+          href="https://maps.google.com/maps?ll=0.493004,33.19919&z=18&t=m&hl=en&gl=UG&mapclient=embed&q=Kiira%20College%20Butiki"
+          className="text-blue-500 underline"
+        >
+          View Larger Map
+        </a>
+        &nbsp; | &nbsp;
+        <a
+          id="dirMapLink"
+          target="_blank"
+          href="https://maps.google.com/maps/dir//Kiira+College+Butiki/@0.4929934,33.1992316,18z/data=!4m5!4m4!1m0!1m2!1m1!1s0x177e7d91a73e4889:0x92d4b1bb50355630"
+          className="text-blue-500 underline"
+        >
+          Get Directions
+        </a>
+      </div>
     </div>
   );
 };
