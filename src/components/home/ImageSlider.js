@@ -55,7 +55,11 @@ const ImageSlider = ({ slides }) => {
               <p className="text-white text-lg">Slide 1 description</p>
             </div>
           </div>
-          <img className="w-full h-full" src="/images/staff.jpg" alt="" />
+          <img
+            className="w-full h-full object-cover"
+            src="/images/staff.jpg"
+            alt=""
+          />
         </div>
       </SwiperSlide>
       <SwiperSlide>
@@ -66,7 +70,11 @@ const ImageSlider = ({ slides }) => {
               <p className="text-white text-lg">Slide 2 description</p>
             </div>
           </div>
-          <img className="w-full h-full" src="/images/students.jpg" alt="" />
+          <img
+            className="w-full h-full object-cover"
+            src="/images/students.jpg"
+            alt=""
+          />
         </div>
       </SwiperSlide>
       <div className="absolute hidden sm:block top-28 left-2 p-3 bg-green-600 text-white z-40">
