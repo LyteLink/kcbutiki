@@ -1,7 +1,0 @@
-{
-  "build": {
-    "env": {
-      "MONGODB_URI": "@MONGODB_URI"
-    }
-  }
-}
