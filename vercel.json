@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "MONGO_URI": "@your_mongo_uri"
+    }
+  }
+}
