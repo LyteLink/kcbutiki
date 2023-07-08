@@ -48,25 +48,25 @@ const ImageSlider = ({ slides }) => {
       ))} */}
 
       <SwiperSlide>
-        <div className="relative">
+        <div className="relative h-full">
           <div className="absolute right-0 top-0 h-full w-2/3 md:w-1/3 bg-black/70 transform -skew-x-12">
             <div className="h-full flex flex-col justify-center pl-6 pr-4 transform skew-x-12">
               <h2 className="text-white text-3xl mb-4">Slide 1 Title</h2>
               <p className="text-white text-lg">Slide 1 description</p>
             </div>
           </div>
-          <img className="w-full" src="/images/staff.jpg" alt="" />
+          <img className="w-full h-full" src="/images/staff.jpg" alt="" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="relative">
+        <div className="relative h-full">
           <div className="absolute right-0 top-0 h-full w-1/3 bg-black/70 transform -skew-x-12">
             <div className="h-full flex flex-col justify-center pl-6 pr-4 transform skew-x-12">
               <h2 className="text-white text-3xl mb-4">Slide 2 Title</h2>
               <p className="text-white text-lg">Slide 2 description</p>
             </div>
           </div>
-          <img className="w-full" src="/images/students.jpg" alt="" />
+          <img className="w-full h-full" src="/images/students.jpg" alt="" />
         </div>
       </SwiperSlide>
       <div className="absolute hidden sm:block top-28 left-2 p-3 bg-green-600 text-white z-40">
