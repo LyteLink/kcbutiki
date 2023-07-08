@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-questrial scroll-smooth;
+}
+
+*::-webkit-scrollbar {
+  @apply w-[6px] h-[6px];
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded bg-slate-400;
+}
+
+*::-webkit-scrollbar-track {
+  @apply !bg-transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  @apply text-slate-600 bg-primary/5;
+}
+
+.error {
+  @apply text-red-500 text-sm;
+}
+
+input,
+select,
+textarea {
+  @apply flex h-9 w-full !rounded-md !border !border-gray-300 bg-white px-3 py-1 text-sm !shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:!ring-green-500 disabled:cursor-not-allowed disabled:opacity-50;
+}
+input.error,
+select.error,
+textarea.error {
+  @apply !border-red-500 focus:ring-0;
+}
+
+textarea {
+  @apply h-20;
+}
+
+input[type="checkbox"] {
+  @apply !w-5 !h-5;
+}
+input[type="checkbox"]:checked {
+  @apply !shadow-blue-500/30 !shadow-md;
+}
+
+button.btn,
+a.btn {
+  @apply px-5 py-2 mt-4 bg-primary text-white rounded-md hover:bg-primary/80 disabled:!opacity-40 flex-shrink-0;
+}
+
+.sidebar a.active {
+  @apply relative rounded-lg bg-[#224620] before:absolute before:h-full before:w-1 before:left-0 before:bg-white;
+}
+
+/* Modals*/
+.modal {
+  @apply fixed top-0 left-0 z-20 w-full h-full opacity-0 pointer-events-none bg-black/50 lg:static lg:opacity-100 lg:pointer-events-auto lg:bg-transparent transition-opacity duration-300;
+}
+
+.dialog {
+  @apply absolute left-0 px-2 top-0 max-w-[250px] lg:overflow-hidden overflow-auto lg:hover:overflow-auto w-full h-full bg-primary text-[#cbcfcc] -translate-x-[500px] lg:fixed lg:translate-x-0 lg:border-r transition-transform duration-300;
+}
+
+.modal.open,
+.dialog.open {
+  @apply translate-x-0 opacity-100 pointer-events-auto;
+}
+
+/* Table */
+.table-wrapper {
+  @apply border-collapse text-[#717382] w-full;
+}
+.table-wrapper table {
+  @apply rounded-lg !border !border-b-slate-200 !mt-4 md:mt-1;
+}
+
+table th {
+  @apply whitespace-nowrap;
+}
+
+.table-wrapper tr {
+  @apply table-row;
+}
+
+.table-wrapper td {
+  @apply !py-4 px-[0.4rem] text-left !border-t;
+}
+
+.table-wrapper th {
+  @apply py-4 px-[0.4rem] text-left font-bold;
+}
+
+.table-bordered th,
+.table-bordered td {
+  @apply border;
+}
+
+/* Datatables */
+.dataTables_filter,
+.dataTables_length {
+  @apply mt-5 !float-none;
+}
+
+.custom_filters {
+  @apply flex-col sm:flex-row flex-center-between gap-4 sm:gap-0;
+}
+
+.custom_filters input,
+.custom_filters select {
+  @apply !outline-none !rounded-lg !border !border-gray-300  focus:!border-primary !inline;
+}
+
+.dataTables_length select {
+  @apply !w-20;
+}
+
+.dataTables_paginate .paginate_button {
+  background-image: none !important;
+  @apply !border-none;
+}
+
+.dataTables_paginate .paginate_button.next:hover,
+.dataTables_paginate .paginate_button.previous:hover {
+  @apply !text-inherit;
+}
+
+.dataTables_paginate .paginate_button:not(.previous, .next):hover {
+  @apply !border-none !bg-primary;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  @apply !border-none !bg-primary !text-white;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  @apply !text-white;
+}
+
+.tooltip-enter {
+  opacity: 0;
+}
+
+.tooltip-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.tooltip-exit {
+  opacity: 1;
+}
+
+.tooltip-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+/* HOME */
+.navbar .dropdown {
+  transform: translateY(1.5rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.navbar .link:hover .dropdown {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #fff;
+  color: green;
+  padding: 1rem !important;
+}
+
+/* Back to top button */
+.back-to-top-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-to-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.flex-3 {
+  flex: 3;
+}

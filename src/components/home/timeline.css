@@ -1,0 +1,140 @@
+.history-container {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-timeline {
+  position: relative;
+  height: auto;
+}
+
+/* Add the line separating the odd and even history */
+.history-timeline::before {
+  position: absolute;
+  content: " ";
+  height: 91%;
+  width: 2px;
+  background-color: #1a1a1a;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.history-timeline ul li {
+  list-style: none;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #d2dce0;
+}
+
+.alternate-timeline ul li {
+  box-shadow: 0 5px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Make all the odd history float left and nothing on their right*/
+.history-timeline ul li:nth-child(odd) {
+  float: left;
+  clear: right;
+  transform: translateX(-30px);
+}
+
+/* Make all the even history float right and nothing on their left*/
+.history-timeline ul li:nth-child(even) {
+  float: right;
+  clear: left;
+  transform: translateX(30px);
+}
+
+/* Adds the hand icon pointing to the hobby */
+.history-timeline ul li::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: "fontawesome";
+  display: grid;
+  place-items: center;
+  line-height: 30px;
+}
+
+.alternate-timeline ul li::before {
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.787),
+    3px 3px 6px rgba(0, 0, 0, 0.5), -3px -3px 6px rgba(255, 255, 255, 0.787);
+}
+
+/* Add the pointer on the li container */
+.history-timeline ul li::after {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(45deg);
+  background: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d2dce0 #d2dce0 transparent transparent;
+}
+
+.history-timeline ul li:nth-child(odd)::after {
+  top: 0.5rem;
+  right: -0.45rem;
+  border-color: #d2dce0 #d2dce0 transparent transparent;
+}
+
+.history-timeline ul li:nth-child(even)::after {
+  top: 0.5rem;
+  left: -0.45rem;
+  border-color: transparent transparent #d2dce0 #d2dce0;
+}
+
+/* This adds the icon on the odd history pseudo element */
+.history-timeline ul li:nth-child(odd):before {
+  content: "<<";
+  top: 0;
+  right: -45px;
+}
+
+.alternate-timeline ul li::before {
+  content: "💡" !important;
+}
+.alternate-timeline h6 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+/* This adds the icon on the even history pseudo element */
+.history-timeline ul li:nth-child(even):before {
+  content: ">>";
+  top: 0;
+  left: -45px;
+}
+
+/* Change background of the pseudo element when list in hovered */
+.history-timeline ul li:hover::before {
+  background-color: rgb(0, 116, 52);
+}
+
+/* These styles apply for screens with a max width of 600px */
+@media (max-width: 600px) {
+  .history-container {
+    width: 80%;
+  }
+  .history-timeline ul li {
+    display: block;
+    width: 100%;
+    transform: translateX(0);
+  }
+}
