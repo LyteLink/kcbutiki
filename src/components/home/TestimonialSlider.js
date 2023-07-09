@@ -14,8 +14,8 @@ const TestimonialSlider = () => {
   const testimonials = [
     {
       id: 1,
-      image: "/images/hm.jpg",
-      name: "KISAME MICHAEL",
+      image: "",
+      name: "SEMWANGA MOSES",
       position: "Head Teacher",
       quote: "Quote from the Head Teacher",
     },

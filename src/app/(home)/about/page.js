@@ -19,7 +19,7 @@ const About = () => {
         <div className="max-w-4xl md:text-6xl mx-auto px-5 text-center">
           <h1 className="text-4xl font-bold text-white">About Us</h1>
           <h2 className="text-xl text-white mt-2">
-            The leading boys ollege in prooducing mUlti-talented men around the
+            The leading boys College in producing multi-talented men around the
             country.
           </h2>
         </div>
@@ -48,7 +48,7 @@ const About = () => {
 
       <div className="py-10">
         <h1 className="text-center text-4xl md:text-6xl font-bold mb-10 my-4">
-          A glance At the hills
+          A glance At the hill
         </h1>
         <Gallery />
       </div>

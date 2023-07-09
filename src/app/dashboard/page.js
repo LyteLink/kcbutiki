@@ -14,7 +14,7 @@ const Dashboard = () => {
         className="w-40 h-40 mx-auto my-6"
       />
       <h1 className="text-center text-3xl font-semibold">
-        WELCOME TO KIRA COLLEGE BUTIKI E-SYSTEM
+        WELCOME TO KIIRA COLLEGE BUTIKI E-SYSTEM
       </h1>
       <div className="flex-center-center">
         <div className="mt-4 text-green-500 border-2 border-green-500 w-fit p-3 shadow-sm shadow-green-500/50">
