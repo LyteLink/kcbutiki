@@ -15,8 +15,7 @@ const AddSubjectForm = () => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post("/api/subjects/create", values);
-      console.log("Response from server:", response.data);
+      await axios.post("/api/subjects", values);
       formik.resetForm();
       toast.success("Subject added successfully");
       router.push("/dashboard/subjects");

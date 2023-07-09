@@ -8,6 +8,7 @@ import useSWR from "swr";
 import Tooltip from "@/components/common/Tooltip";
 import { FiEdit, FiTrash } from "react-icons/fi";
 import useDataTables from "@/components/common/useDataTables";
+import { useState } from "react";
 
 const Clubs = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -16,7 +17,10 @@ const Clubs = () => {
     mutate,
     error,
     isLoading,
-  } = useSWR(`/api/clubs`, fetcher, { revalidateOnMount: true });
+  } = useSWR(`/api/clubs`, fetcher);
+
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [selectAll, setSelectAll] = useState(false);
   useDataTables();
 
   if (isLoading) {
@@ -48,6 +52,38 @@ const Clubs = () => {
     }
   };
 
+  const handleRowSelection = (id) => {
+    if (selectedRows.includes(id)) {
+      setSelectedRows(selectedRows.filter((rowId) => rowId !== id));
+    } else {
+      setSelectedRows([...selectedRows, id]);
+    }
+  };
+
+  const handleSelectAll = () => {
+    if (selectAll) {
+      setSelectedRows([]);
+    } else {
+      const allIds = clubs.map((club) => club._id);
+      setSelectedRows(allIds);
+    }
+    setSelectAll(!selectAll);
+  };
+
+  const handleDeleteSelected = async () => {
+    try {
+      await axios.delete(`/api/clubs/deleteSelected?ids=${selectedRows}`, {
+        data: { selectedRows },
+      });
+      mutate();
+      toast.success("Selected clubs deleted successfully!");
+      setSelectedRows([]);
+    } catch (error) {
+      console.log("Something went wrong!");
+      toast.error("Something went wrong!");
+    }
+  };
+
   return (
     <div>
       <Watermark />
@@ -59,9 +95,26 @@ const Clubs = () => {
       </div>
       <div class="p-4 border rounded-lg shadow bg-white mt-4">
         <div class="p-4 overflow-auto table-wrapper">
+          <div className="mb-4">
+            {selectedRows.length > 0 && (
+              <button
+                className="btn !bg-red-600 hover:!bg-red-600/80"
+                onClick={handleDeleteSelected}
+              >
+                Delete Selected
+              </button>
+            )}
+          </div>
           <table id="my-table" class="w-full table-striped rounded-lg">
             <thead>
               <tr>
+                <th>
+                  <input
+                    type="checkbox"
+                    checked={selectAll}
+                    onChange={handleSelectAll}
+                  />
+                </th>
                 <th>Name</th>
                 <th>Image</th>
                 <th>Description</th>
@@ -72,6 +125,13 @@ const Clubs = () => {
             <tbody>
               {clubs?.map((club) => (
                 <tr key={club._id}>
+                  <td>
+                    <input
+                      type="checkbox"
+                      checked={selectedRows.includes(club._id)}
+                      onChange={() => handleRowSelection(club._id)}
+                    />
+                  </td>
                   <td>{club.name}</td>
                   <td>
                     <img

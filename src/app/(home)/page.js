@@ -7,8 +7,12 @@ import BlogPosts from "@/components/home/BlogPosts";
 import Footer from "@/components/home/Footer";
 
 // const getSlides = async () => {
-//   const res = await axios.get("http://localhost:3000/api/slides");
-//   return res.data;
+//   const res = await fetch(`http://localhost:3000/api/slides`, {
+//     cache: "no-store",
+//   });
+//   const slides = await res.json();
+
+//   return slides;
 // };
 
 const Home = async () => {

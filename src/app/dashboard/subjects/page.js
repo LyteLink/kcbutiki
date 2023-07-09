@@ -8,6 +8,7 @@ import { FiEdit, FiTrash } from "react-icons/fi";
 import useSWR from "swr";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { useState } from "react";
 import useDataTables from "@/components/common/useDataTables";
 
 const Subjects = () => {
@@ -17,7 +18,10 @@ const Subjects = () => {
     mutate,
     error,
     isLoading,
-  } = useSWR(`/api/subjects`, fetcher, { revalidateOnMount: true });
+  } = useSWR(`/api/subjects`, fetcher);
+
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [selectAll, setSelectAll] = useState(false);
   useDataTables();
 
   if (isLoading) {
@@ -44,10 +48,43 @@ const Subjects = () => {
       toast.success("Subject deleted successfully!");
       mutate();
     } catch (error) {
-      console.log("Some thing went wrong!");
+      console.log("Something went wrong!");
       toast.error("Something went wrong!");
     }
   };
+
+  const handleRowSelection = (id) => {
+    if (selectedRows.includes(id)) {
+      setSelectedRows(selectedRows.filter((rowId) => rowId !== id));
+    } else {
+      setSelectedRows([...selectedRows, id]);
+    }
+  };
+
+  const handleSelectAll = () => {
+    if (selectAll) {
+      setSelectedRows([]);
+    } else {
+      const allIds = subjects.map((subject) => subject._id);
+      setSelectedRows(allIds);
+    }
+    setSelectAll(!selectAll);
+  };
+
+  const handleDeleteSelected = async () => {
+    try {
+      await axios.delete(`/api/subjects/deleteSelected?ids=${selectedRows}`, {
+        data: { selectedRows },
+      });
+      mutate();
+      toast.success("Selected subjects deleted successfully!");
+      setSelectedRows([]);
+    } catch (error) {
+      console.log("Something went wrong!");
+      toast.error("Something went wrong!");
+    }
+  };
+
   return (
     <div>
       <Watermark />
@@ -57,11 +94,28 @@ const Subjects = () => {
           + Add Subject
         </Link>
       </div>
-      <div class="p-4 border rounded-lg shadow bg-white mt-4">
-        <div class="p-4 overflow-auto table-wrapper">
-          <table id="my-table" class="w-full table-striped rounded-lg">
+      <div className="p-4 border rounded-lg shadow bg-white mt-4">
+        <div className="p-4 overflow-auto table-wrapper">
+          <div className="mb-4">
+            {selectedRows.length > 0 && (
+              <button
+                className="btn !bg-red-600 hover:!bg-red-600/80"
+                onClick={handleDeleteSelected}
+              >
+                Delete Selected
+              </button>
+            )}
+          </div>
+          <table id="my-table" className="w-full table-striped rounded-lg">
             <thead>
               <tr>
+                <th>
+                  <input
+                    type="checkbox"
+                    checked={selectAll}
+                    onChange={handleSelectAll}
+                  />
+                </th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Date Created</th>
@@ -71,6 +125,13 @@ const Subjects = () => {
             <tbody>
               {subjects?.map((subject) => (
                 <tr key={subject._id}>
+                  <td>
+                    <input
+                      type="checkbox"
+                      checked={selectedRows.includes(subject._id)}
+                      onChange={() => handleRowSelection(subject._id)}
+                    />
+                  </td>
                   <td>{subject.name}</td>
                   <td>{subject.description}</td>
                   <td>{subject.createdAt}</td>

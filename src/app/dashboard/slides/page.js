@@ -16,7 +16,7 @@ const Slides = () => {
     mutate,
     error,
     isLoading,
-  } = useSWR(`/api/slides`, fetcher, { revalidateOnMount: true });
+  } = useSWR(`/api/slides`, fetcher);
 
   if (isLoading) {
     return (

@@ -21,8 +21,7 @@ const EditUnebStatsForm = ({ grade }) => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.put(`/api/uneb/edit/${grade._id}`, values);
-      console.log("Response from server:", response.data);
+      await axios.put(`/api/uneb/${grade._id}`, values);
       formik.resetForm();
       toast.success("Uneb Stats updated successfully");
       router.push("/dashboard/uneb");

@@ -24,8 +24,7 @@ const AddSlideForm = () => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post("/api/slides/create", values);
-      console.log("Response from server:", response.data);
+      await axios.post("/api/slides", values);
       formik.resetForm();
       toast.success("Slide added successfully");
       router.push("/dashboard/slides");

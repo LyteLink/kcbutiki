@@ -21,8 +21,7 @@ const AddUnebStatsForm = () => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post("/api/uneb/create", values);
-      console.log("Response from server:", response.data);
+      await axios.post("/api/uneb", values);
       formik.resetForm();
       toast.success("Uneb Stats added successfully");
       router.push("/dashboard/uneb");

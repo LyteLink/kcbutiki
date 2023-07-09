@@ -19,8 +19,7 @@ const EditEventForm = ({ event }) => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.put(`/api/events/edit/${event._id}`, values);
-      console.log("Response from server:", response.data);
+      await axios.put(`/api/events/${event._id}`, values);
       formik.resetForm();
       toast.success("Event updated successfully");
       router.push("/dashboard/events");

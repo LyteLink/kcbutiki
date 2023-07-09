@@ -17,7 +17,7 @@ const Family = () => {
     mutate,
     error,
     isLoading,
-  } = useSWR(`/api/family`, fetcher, {revalidateOnMount: true});
+  } = useSWR(`/api/family`, fetcher);
 
   if (isLoading) {
     return (
