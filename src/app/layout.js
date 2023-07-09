@@ -5,8 +5,8 @@ import { Toaster } from "react-hot-toast";
 // import NextProgressProvider from "@/components/common/NProgressProvider";
 
 export const metadata = {
-  title: "Kira College Butiki",
-  description: "Kira College Butiki",
+  title: "Kiira College Butiki",
+  description: "Kiira College Butiki",
 };
 
 export default function RootLayout({ children }) {
