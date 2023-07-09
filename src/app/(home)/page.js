@@ -6,17 +6,18 @@ import Events from "@/components/home/Events";
 import BlogPosts from "@/components/home/BlogPosts";
 import Footer from "@/components/home/Footer";
 
-const getSlides = async () => {
-  const res = await fetch(`http://localhost:3000/api/slides`, {
-    cache: "no-store",
-  });
-  const slides = await res.json();
+// const getSlides = async () => {
+//   const res = await fetch(`http://localhost:3000/api/slides`, {
+//     cache: "no-store",
+//   });
+//   const slides = await res.json();
 
-  return slides;
-};
+//   return slides;
+// };
 
 const Home = async () => {
-  const slides = await getSlides();
+  // const slides = await getSlides();
+  const slides = [];
 
   return (
     <div className="w-full">
