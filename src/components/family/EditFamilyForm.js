@@ -30,11 +30,7 @@ const EditFamilyForm = ({ family }) => {
   // Handle form submission
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.put(
-        `/api/family/edit/${family._id}`,
-        values
-      );
-      console.log("Response from server:", response.data);
+      await axios.put(`/api/family/${family._id}`, values);
       formik.resetForm();
       toast.success("Family member updated successfully");
       router.push("/dashboard/family");

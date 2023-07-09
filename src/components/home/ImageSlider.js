@@ -1,11 +1,7 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */ import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-} from "swiper/modules";
+/* eslint-disable @next/next/no-img-element */
+import { Navigation, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -33,7 +29,7 @@ const ImageSlider = ({ slides }) => {
       <div className="absolute top-1/2 right-2 p-3 rounded-full bg-white -translate-y-1/2 z-30 custom-swiper-button-next cursor-pointer">
         <FiArrowRight />
       </div>
-      {/* {slides?.map((slide) => (
+      {slides?.map((slide) => (
         <SwiperSlide key={slide._id}>
           <div className="relative">
             <div className="absolute right-0 top-0 h-full w-1/3 bg-black/70 transform -skew-x-12">
@@ -45,9 +41,9 @@ const ImageSlider = ({ slides }) => {
             <img className="w-full" src={slide.imageUrl} alt={slide.title} />
           </div>
         </SwiperSlide>
-      ))} */}
+      ))}
 
-      <SwiperSlide>
+      {/* <SwiperSlide>
         <div className="relative h-full">
           <div className="absolute right-0 top-0 h-full w-2/3 md:w-1/3 bg-black/70 transform -skew-x-12">
             <div className="h-full flex flex-col justify-center pl-6 pr-4 transform skew-x-12">
@@ -76,7 +72,7 @@ const ImageSlider = ({ slides }) => {
             alt=""
           />
         </div>
-      </SwiperSlide>
+      </SwiperSlide> */}
       <div className="absolute hidden sm:block top-28 left-2 p-3 bg-green-600 text-white z-40">
         <h1 className="text-xl">Displine and Hardwork</h1>
       </div>

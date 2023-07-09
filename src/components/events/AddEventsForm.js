@@ -5,15 +5,9 @@ import { eventValidationSchema } from "@/utils/ValidationSchemas";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import useSWR from "swr";
 
 const AddEventForm = () => {
   const router = useRouter();
-  const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { mutate, data: events } = useSWR(`/api/events`, fetcher, {
-    revalidateOnFocus: true,
-    refreshInterval: 5000,
-  });
 
   const initialValues = {
     name: "",
@@ -25,8 +19,7 @@ const AddEventForm = () => {
 
   const handleSubmit = async (values) => {
     try {
-      await axios.post("/api/events/create", values);
-      mutate();
+      await axios.post("/api/events", values);
       formik.resetForm();
       toast.success("Event added successfully");
       router.push("/dashboard/events");
@@ -41,10 +34,6 @@ const AddEventForm = () => {
     validationSchema: eventValidationSchema,
     onSubmit: handleSubmit,
   });
-
-  if (!events) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className="p-4 rounded-lg shadow bg-white">
@@ -143,11 +132,6 @@ const AddEventForm = () => {
           {formik.isSubmitting ? "Submitting..." : "Submit"}
         </button>
       </form>
-      <div className="mt-5">
-        {events.map((event) => (
-          <div key={event._id}>{event.name}</div>
-        ))}
-      </div>
     </div>
   );
 };

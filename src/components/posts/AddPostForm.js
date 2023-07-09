@@ -4,7 +4,6 @@
 import React, { useRef, useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { storage } from "@/firebase.config";
 import { toolbarOptions } from "@/utils/react-quill-toolbar";
@@ -15,6 +14,10 @@ import { postValidationSchema } from "@/utils/ValidationSchemas";
 import { handleImageUpload } from "@/utils/handleImageUpload";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
+import dynamic from "next/dynamic";
+const ReactQuill = dynamic(() => import("react-quill"), {
+  ssr: false,
+});
 
 const AddPostForm = () => {
   const router = useRouter();
@@ -28,8 +31,7 @@ const AddPostForm = () => {
   // Handle form submission
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post("/api/posts/create", values);
-      console.log("Response from server:", response.data);
+      await axios.post("/api/posts", values);
       formik.resetForm();
       toast.success("Post added successfully");
       router.push("/dashboard/posts");

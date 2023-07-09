@@ -24,8 +24,7 @@ const EditSlideForm = ({ slide }) => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.put(`/api/slides/edit/${slide._id}`, values);
-      console.log("Response from server:", response.data);
+      await axios.put(`/api/slides/${slide._id}`, values);
       formik.resetForm();
       toast.success("Slide updated successfully");
       router.push("/dashboard/slides");

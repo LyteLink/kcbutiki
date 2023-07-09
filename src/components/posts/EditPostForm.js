@@ -28,8 +28,7 @@ const EditPostForm = ({ post }) => {
   // Handle form submission
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.put(`/api/posts/edit/${post._id}`, values);
-      console.log("Response from server:", response.data);
+      await axios.put(`/api/posts/edit/${post._id}`, values);
       formik.resetForm();
       toast.success("Post updated successfully");
       router.push("/dashboard/posts");

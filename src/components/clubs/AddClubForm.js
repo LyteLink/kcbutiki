@@ -1,5 +1,4 @@
 "use client";
-
 /* eslint-disable @next/next/no-img-element */
 import React, { useRef, useState } from "react";
 import { useFormik } from "formik";
@@ -7,13 +6,17 @@ import { storage } from "@/firebase.config";
 import { FiTrash } from "react-icons/fi";
 import { handleImageUpload } from "@/utils/handleImageUpload";
 import { deleteObject, ref } from "firebase/storage";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { toolbarOptions } from "@/utils/react-quill-toolbar";
 import { clubValidationSchema } from "@/utils/ValidationSchemas";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import dynamic from "next/dynamic";
+const ReactQuill = dynamic(() => import("react-quill"), {
+  ssr: false,
+});
 
 const AddClubForm = () => {
   const router = useRouter();
@@ -34,10 +37,9 @@ const AddClubForm = () => {
   // Handle form submission
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post("/api/clubs/create", values);
-      console.log("Response from server:", response.data);
+      await axios.post("/api/clubs", values);
       formik.resetForm();
-      toast.success("Club added successfully");
+      toast.success("Club created successfully");
       router.push("/dashboard/clubs");
     } catch (error) {
       console.error("Error adding club:", error);

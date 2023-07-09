@@ -30,8 +30,7 @@ const AddFamilyForm = () => {
   // Handle form submission
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post("/api/family/create", values);
-      console.log("Response from server:", response.data);
+      await axios.post("/api/family", values);
       formik.resetForm();
       toast.success("Family member added successfully");
       router.push("/dashboard/family");

@@ -15,7 +15,7 @@ const UnebStats = () => {
     mutate,
     error,
     isLoading,
-  } = useSWR(`/api/uneb`, fetcher, { revalidateOnMount: true });
+  } = useSWR(`/api/uneb`, fetcher);
 
   if (isLoading) {
     return (

@@ -15,11 +15,7 @@ const EditSubjectForm = ({ subject }) => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.put(
-        `/api/subjects/edit/${subject._id}`,
-        values
-      );
-      console.log("Response from server:", response.data);
+      await axios.put(`/api/subjects/${subject._id}`, values);
       formik.resetForm();
       toast.success("Subject updated successfully");
       router.push("/dashboard/subjects");

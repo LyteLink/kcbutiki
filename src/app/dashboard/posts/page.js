@@ -8,6 +8,7 @@ import { FiEdit, FiTrash } from "react-icons/fi";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import useDataTables from "@/components/common/useDataTables";
+import { useState } from "react";
 
 const Posts = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -17,6 +18,8 @@ const Posts = () => {
     error,
     isLoading,
   } = useSWR(`/api/posts`, fetcher, { revalidateOnMount: true });
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [selectAll, setSelectAll] = useState(false);
   useDataTables();
 
   if (isLoading) {
@@ -48,6 +51,38 @@ const Posts = () => {
     }
   };
 
+  const handleRowSelection = (id) => {
+    if (selectedRows.includes(id)) {
+      setSelectedRows(selectedRows.filter((rowId) => rowId !== id));
+    } else {
+      setSelectedRows([...selectedRows, id]);
+    }
+  };
+
+  const handleSelectAll = () => {
+    if (selectAll) {
+      setSelectedRows([]);
+    } else {
+      const allIds = posts.map((post) => post._id);
+      setSelectedRows(allIds);
+    }
+    setSelectAll(!selectAll);
+  };
+
+  const handleDeleteSelected = async () => {
+    try {
+      await axios.delete(`/api/posts/deleteSelected?ids=${selectedRows}`, {
+        data: { selectedRows },
+      });
+      mutate();
+      toast.success("Selected posts deleted successfully!");
+      setSelectedRows([]);
+    } catch (error) {
+      console.log("Something went wrong!");
+      toast.error("Something went wrong!");
+    }
+  };
+
   return (
     <div>
       <Watermark />
@@ -59,9 +94,26 @@ const Posts = () => {
       </div>
       <div className="p-4 border rounded-lg shadow bg-white mt-4">
         <div className="p-4 overflow-auto table-wrapper">
+          <div className="mb-4">
+            {selectedRows.length > 0 && (
+              <button
+                className="btn !bg-red-600 hover:!bg-red-600/80"
+                onClick={handleDeleteSelected}
+              >
+                Delete Selected
+              </button>
+            )}
+          </div>
           <table id="my-table" className="w-full table-striped rounded-lg">
             <thead>
               <tr>
+                <th>
+                  <input
+                    type="checkbox"
+                    checked={selectAll}
+                    onChange={handleSelectAll}
+                  />
+                </th>
                 <th>Title</th>
                 <th>Image</th>
                 <th>Slug</th>
@@ -73,6 +125,13 @@ const Posts = () => {
             <tbody>
               {posts?.map((post) => (
                 <tr key={post._id}>
+                  <td>
+                    <input
+                      type="checkbox"
+                      checked={selectedRows.includes(post._id)}
+                      onChange={() => handleRowSelection(post._id)}
+                    />
+                  </td>
                   <td>{post.title}</td>
                   <td>
                     <img
