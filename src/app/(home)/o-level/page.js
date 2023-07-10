@@ -160,6 +160,84 @@ const Olevel = () => {
             </div>
           </div>
         </div>
+
+
+        <section className="pt-36 pb-12 bg-white max-w-7xl mx-auto px-4">
+  <div className="container">
+    <div className="section-title">
+      <h3 className="text-4xl text-center my-6 font-semibold">
+        Old and New Curriculum for O Level in Uganda
+      </h3>
+    </div>
+    <p className="text-muted text-lg mt-3">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rerum
+      soluta in non, perferendis provident odio, eaque possimus repellat
+      debitis repudiandae illum quas, deserunt reprehenderit nostrum rem
+      dignissimos earum. Consectetur!
+    </p>
+    <div className="mt-10">
+      <h2 className="text-2xl">The Old Curriculum</h2>
+      <p>
+        The old curriculum for O level in Uganda was based on the 8-4-4 system,
+        which means that students would spend 8 years in primary school, 4 years
+        in lower secondary school, and 4 years in upper secondary school. The
+        curriculum was designed to prepare students for university or other higher
+        education.
+      </p>
+      <ul className="list-disc list-inside mt-4 bg-gray-100 p-4">
+        <li className="text-gray-700 items-start">English Language</li>
+        <li className="text-gray-700 items-start">Mathematics</li>
+        <li className="text-gray-700 items-start">Science</li>
+        <li className="text-gray-700 items-start">Social Studies</li>
+        <li className="text-gray-700 items-start">CRE/IRS</li>
+        <li className="text-gray-700 items-start">French</li>
+        <li className="text-gray-700 items-start">German</li>
+        <li className="text-gray-700 items-start">Music</li>
+        <li className="text-gray-700 items-start">Art</li>
+        <li className="text-gray-700 items-start">
+          <a
+            href="https://ncdc.go.ug/curriculum-and-instructional-materials/o-level-curriculum/"
+            className="text-primary hover:underline"
+          >
+            More information on the old curriculum
+          </a>
+        </li>
+      </ul>
+      <h2 className="text-2xl">The New Curriculum</h2>
+      <p>
+        The new curriculum for O level in Uganda is based on the 9-3-4 system,
+        which means that students will spend 9 years in primary school, 3 years
+        in lower secondary school, and 4 years in upper secondary school. The
+        curriculum is designed to provide students with a more comprehensive
+        education, including both academic and vocational subjects.
+      </p>
+      <ul className="list-disc list-inside mt-4 bg-gray-100 p-4">
+        <li className="text-gray-700 items-start">English Language</li>
+        <li className="text-gray-700 items-start">Mathematics</li>
+        <li className="text-gray-700 items-start">Science</li>
+        <li className="text-gray-700 items-start">Social Studies</li>
+        <li className="text-gray-700 items-start">CRE/IRS</li>
+        <li className="text-gray-700 items-start">French</li>
+        <li className="text-gray-700 items-start">German</li>
+        <li className="text-gray-700 items-start">Music</li>
+        <li className="text-gray-700 items-start">Art</li>
+        <li className="text-gray-700 items-start">Computer Studies</li>
+        <li className="text-gray-700 items-start">
+          <a
+            href="https://ncdc.go.ug/curriculum-and-instructional-materials/o-level-curriculum/"
+            className="text-primary hover:underline"
+          >
+            More information on the new curriculum
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
         <div className="mt-20 pt-6">
           <hr className="hr3" />
           <h1 className="text-2xl my-2 font-semibold text-center">
