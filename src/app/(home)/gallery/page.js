@@ -15,6 +15,18 @@ const galleryData = [
     description: "Description for Image 3",
   },
     {
+    imageUrl: "/images/gallery/sports/fufa_best.jpg",
+    description: "Description for Image 1",
+  },
+  {
+    imageUrl: "/images/gallery/sports/kcb_fufa_team2.jpg",
+    description: "Description for Image 2",
+  },
+  {
+    imageUrl: "/images/gallery/sports/kcb_supporters.jpg",
+    description: "Description for Image 3",
+  },
+    {
     imageUrl: "/images/gallery/alevel.jpg",
     description: "Description for Image 1",
   },
