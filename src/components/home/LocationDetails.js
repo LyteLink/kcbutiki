@@ -16,7 +16,7 @@ const LocationDetails = () => {
         </div>
       </div>
       <div className="flex-align-center flex-col sm:flex-row gap-4 mt-4">
-        <div className="flex-1 flex-center-center p-4 shadow border rounded-lg">
+        <div className="flex-1 w-full !md:w-fit flex-center-center p-4 shadow border rounded-lg">
           <div>
             <div className="w-12 h-12 flex-center-center rounded-full border border-dotted border-green-600 mx-auto">
               <FaEnvelope className="text-lg text-green-600" />
@@ -27,7 +27,7 @@ const LocationDetails = () => {
             <p className="mt-3 text-muted text-lg">kc_butiki@yahoo.com</p>
           </div>
         </div>
-        <div className="flex-1 flex-center-center p-4 shadow border rounded-lg">
+        <div className="flex-1 w-full !md:w-fit flex-center-center p-4 shadow border rounded-lg">
           <div>
             <div className="w-12 h-12 flex-center-center rounded-full border border-dotted border-green-600 mx-auto">
               <FaPhone className="text-lg text-green-600" />
