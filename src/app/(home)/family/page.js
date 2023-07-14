@@ -4,7 +4,13 @@ import Footer from "@/components/home/Footer";
 import React from "react";
 
 const Family = () => {
-  const familyCategories = ["PTA", "BOG", "Staff", "KICOBA", "Student Leaders"];
+  const familyCategories = [
+    "PTA",
+    "BOG",
+    "Lead Staff",
+    "KICOBA",
+    "Student Leaders",
+  ];
 
   return (
     <>
@@ -16,7 +22,7 @@ const Family = () => {
             {familyCategories.map((category, i) => (
               <div
                 key={i}
-                className={`px-4 py-2 border border-green-600 rounded-t-md cursor-pointer ${
+                className={`px-4 py-2 border border-green-600 rounded-t-md cursor-pointer flex-shrink-0 ${
                   i === 0 && "bg-green-600 text-white"
                 }`}
               >
