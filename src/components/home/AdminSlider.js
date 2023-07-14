@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
-const TestimonialSlider = () => {
+const AdminSlider = () => {
   const testimonials = [
     {
       id: 1,
@@ -125,4 +125,4 @@ const TestimonialSlider = () => {
   );
 };
 
-export default TestimonialSlider;
+export default AdminSlider;
