@@ -12,7 +12,7 @@ const Olevel = () => {
         <div className="container text-center">
           <div className="section-title">
             <h3 className="text-4xl text-center my-6 font-semibold">
-              Statistics
+              O-level statistics
             </h3>
           </div>
           <p className="text-muted text-lg mt-3">
@@ -241,7 +241,7 @@ const Olevel = () => {
         <div className="mt-20 pt-6">
           <hr className="hr3" />
           <h1 className="text-2xl my-2 font-semibold text-center">
-            Word from DOS.......
+            Word from DOS
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center mt-4">
             <div className="md:col-span-1">
@@ -258,18 +258,7 @@ const Olevel = () => {
                   ab. Et, itaque! Dicta ab dignissimos cupiditate. Unde minima
                   recusandae, cumque nisi enim est nostrum laborum saepe iure
                   repellat porro quam. Reprehenderit, dolorum amet soluta
-                  dignissimos adipisci, perspiciatis, quo minima veritatis
-                  deleniti sequi iusto reiciendis! Obcaecati minus repudiandae
-                  doloremque nulla accusamus nesciunt, minima rerum pariatur
-                  qui, quidem, porro ad! Deleniti ad, alias accusamus possimus,
-                  ea ullam magni perferendis quas consequuntur molestiae
-                  corporis sint magnam nulla commodi quos ipsa aperiam
-                  laudantium. Quisquam sequi dolore voluptatum, dolores quas aut
-                  at amet illum rem sunt pariatur tempora. Labore culpa
-                  architecto ipsam saepe nemo, maiores pariatur dolores iure
-                  doloribus ratione modi aperiam maxime nostrum ipsum, eveniet
-                  harum quas accusamus fuga molestias ullam minus in.
-                  Voluptates.
+                  dignissimos adipisci.
                 </p>
               </div>
             </div>

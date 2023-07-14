@@ -148,7 +148,7 @@ const Uneb = () => {
         </div>
         <div className="mt-20">
           <h1 className="text-2xl my-2 font-semibold text-center">
-            Word from the Examination department .......
+            Word from the examination department
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center mt-4">
             <div className="md:col-span-1">
@@ -169,14 +169,7 @@ const Uneb = () => {
                   deleniti sequi iusto reiciendis! Obcaecati minus repudiandae
                   doloremque nulla accusamus nesciunt, minima rerum pariatur
                   qui, quidem, porro ad! Deleniti ad, alias accusamus possimus,
-                  ea ullam magni perferendis quas consequuntur molestiae
-                  corporis sint magnam nulla commodi quos ipsa aperiam
-                  laudantium. Quisquam sequi dolore voluptatum, dolores quas aut
-                  at amet illum rem sunt pariatur tempora. Labore culpa
-                  architecto ipsam saepe nemo, maiores pariatur dolores iure
-                  doloribus ratione modi aperiam maxime nostrum ipsum, eveniet
-                  harum quas accusamus fuga molestias ullam minus in.
-                  Voluptates.
+                  ea ullam magni.
                 </p>
               </div>
             </div>

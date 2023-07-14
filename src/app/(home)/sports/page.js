@@ -57,11 +57,10 @@ const Sport = () => {
             priority
           />
           <div className="absolute w-4/5 bottom-5 left-5 bg-primary/80 p-3 text-white">
-            <h1 className="text-2xl font-semibold">Computer Science Sport</h1>
+            <h1 className="text-2xl font-semibold">Sports</h1>
             <p className="text-lg mt-2">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Molestias iste magni veniam consectetur quis sed. Dicta officiis
-              veniam quibusdam magni amet. Ullam reprehenderit eum officia.
+              Molestias iste magni veniam consectetur quis sed
             </p>
           </div>
         </div>
@@ -104,7 +103,7 @@ const Sport = () => {
       <div className="mt-20 pt-6">
           <hr className="hr3" />
           <h1 className="text-2xl my-2 font-semibold text-center">
-            Word from Sports Teacher
+            Word from sports teacher
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center mt-4">
             <div className="md:col-span-1">
@@ -121,15 +120,7 @@ const Sport = () => {
                   ab. Et, itaque! Dicta ab dignissimos cupiditate. Unde minima
                   recusandae, cumque nisi enim est nostrum laborum saepe iure
                   repellat porro quam. Reprehenderit, dolorum amet soluta
-                  dignissimos adipisci, perspiciatis, quo minima veritatis
-                  deleniti sequi iusto reiciendis! Obcaecati minus repudiandae
-                  doloremque.  Lorem ipsum dolor sit, amet consectetur adipisicing elit. At,
-                  ab. Et, itaque! Dicta ab dignissimos cupiditate. Unde minima
-                  recusandae, cumque nisi enim est nostrum laborum saepe iure
-                  repellat porro quam. Reprehenderit, dolorum amet soluta
-                  dignissimos adipisci, perspiciatis, quo minima veritatis
-                  deleniti sequi iusto reiciendis! Obcaecati minus repudiandae
-                  doloremque .
+                  dignissimos adipisci.
                  </p>
               </div>
             </div>

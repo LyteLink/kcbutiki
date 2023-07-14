@@ -270,7 +270,7 @@ const Navbar = () => {
                 Admissions
               </Link>
               <Link
-                href="/subject"
+                href="/subjects"
                 className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
                 onClick={closeMenu}
               >
