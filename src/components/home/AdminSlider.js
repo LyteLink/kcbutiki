@@ -55,7 +55,8 @@ const AdminSlider = () => {
       className="parallax section db parallax-off !bg-cover !bg-no-repeat"
       style={{ background: `url('./images2/staff.jpg')` }}
     >
-          <div className="mt-12">
+      <div className="container mx-auto py-16">
+        <div className="mt-12">
           <Swiper
             modules={[Navigation, Pagination]}
             navigation={{
