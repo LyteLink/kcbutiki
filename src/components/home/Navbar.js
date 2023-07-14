@@ -263,6 +263,13 @@ const Navbar = () => {
               }`}
             >
               <Link
+                href="/admissions"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
+                onClick={closeMenu}
+              >
+                Admissions
+              </Link>
+              <Link
                 href="/subject"
                 className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
                 onClick={closeMenu}
@@ -313,6 +320,13 @@ const Navbar = () => {
               }`}
             >
               <Link
+                href="/sports"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
+                onClick={closeMenu}
+              >
+                Sports Activities
+              </Link>
+              <Link
                 href="/clubs/123"
                 className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
                 onClick={closeMenu}
@@ -325,6 +339,13 @@ const Navbar = () => {
                 onClick={closeMenu}
               >
                 Science Club
+              </Link>
+              <Link
+                href="/clubs/123"
+                className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
+                onClick={closeMenu}
+              >
+                Chemistry Club
               </Link>
               <Link
                 href="/clubs/123"
