@@ -26,7 +26,7 @@ const Navbar = () => {
         </div>
       </div>
       <h1 className="text-4xl hidden md:block font-bold text-primary text-center w-full">
-        KIRA COLLEGE BUTIKI
+        KIIRA COLLEGE BUTIKI
       </h1>
     </div>
   );

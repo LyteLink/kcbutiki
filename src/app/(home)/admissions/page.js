@@ -42,7 +42,8 @@ const Admission = () => {
             </div>
             <div className="bg-gray-100 rounded-lg p-6">
               <h2 className="text-xl font-semibold mb-4">Fees Structure</h2>
-              <table className="w-full border-collapse">
+              <div className="overflow-x-auto ">
+              <table className="w-full border-collapse sm:w-">
                 <thead>
                   <tr className="text-left">
                     <th className="border border-gray-300 p-2">Year</th>
@@ -79,6 +80,7 @@ const Admission = () => {
                   {/*Add more rows for other terms and years */}
                 </tbody>
               </table>
+              </div>
               <button className="bg-primary text-white py-2 px-4 rounded-lg mt-4">
                 Download Document
               </button>

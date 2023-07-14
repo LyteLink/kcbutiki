@@ -23,7 +23,7 @@ const galleryData = [
     description: "Description for Image 2",
   },
   {
-    imageUrl: "/images/gallery/sports/kcb_supporters1.jpg",
+    imageUrl: "/images/gallery/sports/fufa_supporters1.jpg",
     description: "Description for Image 3",
   },
     {

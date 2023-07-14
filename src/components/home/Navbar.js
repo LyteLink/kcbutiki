@@ -230,7 +230,7 @@ const Navbar = () => {
             </button>
             <div className="w-fit p-3 ml-6 bg-secondary rounded-lg">
               <Link
-                href="/subject"
+                href="/subjects"
                 className="block px-4 py-2 text-sm hover:bg-[rgb(47,86,45)] w-fit text-slate-200"
               >
                 Subject Departments
