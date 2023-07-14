@@ -117,20 +117,29 @@ const AddFamilyForm = () => {
         </div>
 
         {/* Category */}
-        <div className="mt-4">
+
+        {/* Category */}
+        <div>
           <label htmlFor="category">Category:</label>
-          <input
-            type="text"
+          <select
             id="category"
             name="category"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.category}
-            placeholder="e.g PTA"
-            className={`${
+            className={`!text-base ${
               formik.touched.category && formik.errors.category && "error"
             }`}
-          />
+          >
+            <option value="" disabled>
+              Select category
+            </option>
+            <option value="PTA">PTA</option>
+            <option value="BOG">BOG</option>
+            <option value="Lead Staff">Lead Staff</option>
+            <option value="KICOBA">KICOBA</option>
+            <option value="Student Leader">Student Leader</option>
+          </select>
           {formik.touched.category && formik.errors.category ? (
             <div className="error">{formik.errors.category}</div>
           ) : null}

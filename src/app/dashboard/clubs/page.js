@@ -93,8 +93,8 @@ const Clubs = () => {
           + Add Club
         </Link>
       </div>
-      <div class="p-4 border rounded-lg shadow bg-white mt-4">
-        <div class="p-4 overflow-auto table-wrapper">
+      <div className="p-4 border rounded-lg shadow bg-white mt-4">
+        <div className="p-4 overflow-auto table-wrapper">
           <div className="mb-4">
             {selectedRows.length > 0 && (
               <button
@@ -105,7 +105,7 @@ const Clubs = () => {
               </button>
             )}
           </div>
-          <table id="my-table" class="w-full table-striped rounded-lg">
+          <table id="my-table" className="w-full table-striped rounded-lg">
             <thead>
               <tr>
                 <th>
