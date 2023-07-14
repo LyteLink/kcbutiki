@@ -94,6 +94,12 @@ const Navbar = () => {
               >
                 About Us
               </Link>
+              <Link
+                href="/administration"
+                className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+              >
+                Administration
+              </Link>
               <div className="relative inline-block link">
                 <button className="text-slate-100 hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase flex-align-center gap-x-2">
                   Academics
@@ -101,6 +107,12 @@ const Navbar = () => {
                 </button>
                 <div className="dropdown absolute z-10 mt-2 w-48 bg-white shadow-lg rounded-lg">
                   <div className="py-1">
+                    <Link
+                      href="/admissions"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Admissions
+                    </Link>
                     <Link
                       href="/subjects"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -141,6 +153,12 @@ const Navbar = () => {
                 </button>
                 <div className="dropdown absolute z-10 mt-2 w-48 bg-white shadow-lg rounded-lg">
                   <div className="py-1">
+                    <Link
+                      href="/sports"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Sports Activities
+                    </Link>
                     <Link
                       href="/clubs/123"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"

@@ -95,7 +95,7 @@ const Footer = () => {
               All Rights Reserved. &copy; {new Date().getFullYear()}{" "}
               <a href="#">KIIRA COLLEGE BUTIKI</a> Design By :{" "}
               <a
-                href="https://html.design/"
+                href="https://lytelink.tech/"
                 className="text-gray-300 hover:text-white"
               >
                 LyteLink
