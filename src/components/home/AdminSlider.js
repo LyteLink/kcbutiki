@@ -55,16 +55,7 @@ const AdminSlider = () => {
       className="parallax section db parallax-off !bg-cover !bg-no-repeat"
       style={{ background: `url('./images2/staff.jpg')` }}
     >
-      // <div className="container mx-auto py-16">
-      //   <div className="section-title text-center">
-      //     <h3 className="text-3xl font-bold">Administration</h3>
-      //     <p className="text-lg">
-      //       Kiira College Butiki has got well experienced, supportive, and
-      //       incredibly qualified Administration
-      //     </p>
-      //   </div>
-
-        <div className="mt-12">
+          <div className="mt-12">
           <Swiper
             modules={[Navigation, Pagination]}
             navigation={{
